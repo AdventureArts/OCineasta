@@ -20,6 +20,9 @@ class OCINEASTA_API AOCHUD : public AHUD
 	
 	FVector2D screenCentre;
 	
+public:
+
+	FVector2D getCursorScreenLocation();
 
 protected:
 

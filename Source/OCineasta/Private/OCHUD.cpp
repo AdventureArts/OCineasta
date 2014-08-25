@@ -37,3 +37,8 @@ void AOCHUD::DrawHUD()
 		Canvas->K2_DrawTexture(cursorTexture, screenCentre - cursorCentre, cursorSize, FVector2D(0.f, 0.f));
 	}
 }
+
+FVector2D AOCHUD::getCursorScreenLocation()
+{
+	return cursorLocation + screenCentre;
+}
