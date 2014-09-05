@@ -16,6 +16,12 @@ class OCINEASTA_API AOCDefaultPawn : public ADefaultPawn
 	float forwardSpeed = 0.f;
 	float rightSpeed = 0.f;
 	
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
+	TSubobjectPtr<class USpringArmComponent> cameraSupport;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
+	TSubobjectPtr<class UCameraComponent> playerCamera;
+
 
 public:
 
