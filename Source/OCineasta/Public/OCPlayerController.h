@@ -3,6 +3,7 @@
 #pragma once
 
 #include "GameFramework/PlayerController.h"
+#include "OCDefaultPawn.h"
 #include "OCPlayerController.generated.h"
 
 /**

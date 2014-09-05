@@ -40,9 +40,9 @@ void AOCPlayerController::forward(float input)
 {
 	FVector viewDirection = GetControlRotation().Vector().SafeNormal();
 
-	APawn *controlledPawn = GetPawn();
+	AOCDefaultPawn *OCPawn = StaticCast<AOCDefaultPawn*>(GetPawn());
 
-	if (controlledPawn) controlledPawn->AddMovementInput(viewDirection, input * 0.5f);
+	if (OCPawn) OCPawn->setForwardSpeed(input);
 }
 
 void AOCPlayerController::right(float input)
@@ -50,7 +50,7 @@ void AOCPlayerController::right(float input)
 	FRotator viewRotator = GetControlRotation().Add(0.f, 90.f, 0.f);
 	FVector viewDirection = viewRotator.Vector().SafeNormal();
 
-	APawn *controlledPawn = GetPawn();
+	AOCDefaultPawn *OCPawn = StaticCast<AOCDefaultPawn*>(GetPawn());
 
-	if (controlledPawn) controlledPawn->AddMovementInput(viewDirection, input * 0.5f);
+	if (OCPawn) OCPawn->setRightSpeed(input);
 }
