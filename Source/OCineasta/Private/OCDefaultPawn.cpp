@@ -30,13 +30,13 @@ void AOCDefaultPawn::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
 
-	FVector directionMovement;
+	FVector movementDirection;
 
-	directionMovement.X = forwardSpeed;
-	directionMovement.Y = rightSpeed;
-	directionMovement.Normalize();
+	movementDirection.X = forwardSpeed;
+	movementDirection.Y = rightSpeed;
+	movementDirection.Normalize();
 
-	AddMovementInput(directionMovement);
+	AddMovementInput(movementDirection);
 }
 
 void AOCDefaultPawn::setForwardSpeed(float speed)
