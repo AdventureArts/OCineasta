@@ -32,9 +32,18 @@ void AOCHUD::DrawHUD()
 	// Atualiza a coordenada que representa o centro da tela.
 	screenCentre = FVector2D(Canvas->ClipX, Canvas->ClipY) / 2.f;
 
+	AOCPlayerController *PC = StaticCast<AOCPlayerController*>(PlayerOwner);
+
+	if (PC)
+	{
+		cursorLocation = PC->GetMouseLocation();
+		cursorLocation += screenCentre;
+		cursorLocation -= cursorCentre;
+	}
+
 	if (cursorTexture) // Existe a textura de cursor para ser impressa na tela?
 	{
-		Canvas->K2_DrawTexture(cursorTexture, screenCentre - cursorCentre, cursorSize, FVector2D(0.f, 0.f));
+		Canvas->K2_DrawTexture(cursorTexture, cursorLocation, cursorSize, FVector2D(0.f, 0.f));
 	}
 }
 

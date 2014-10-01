@@ -3,6 +3,7 @@
 #pragma once
 
 #include "GameFramework/HUD.h"
+#include "OCPlayerController.h"
 #include "OCHUD.generated.h"
 
 /**
@@ -18,6 +19,8 @@ class OCINEASTA_API AOCHUD : public AHUD
 	FVector2D cursorLocation;
 	FVector2D cursorCentre;
 	
+	FVector2D mouseLocation;
+
 	FVector2D screenCentre;
 	
 public:

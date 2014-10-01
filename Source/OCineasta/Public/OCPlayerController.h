@@ -14,7 +14,18 @@ class OCINEASTA_API AOCPlayerController : public APlayerController
 {
 	GENERATED_UCLASS_BODY()
 
-	
+	FVector2D mouseLocation;
+
+	float mouseSpeed;
+
+public:
+
+	FVector2D GetMouseLocation() const;
+
+	float GetMouseSpeed() const;
+
+	void SetMouseSpeed(float speed);
+
 protected:
 
 	virtual void BeginPlay();
